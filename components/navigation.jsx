@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import classes from "../styles/navigation.module.css";
 
 export default function Navigaion () {
     const param = usePathname();
     return (
-        <nav>
+        <nav className={classes.nav}>
             <ul>
                 <li>
                     <Link href="/">Home</Link> {param === "/" ? "🔥" : ""}
